@@ -30,7 +30,8 @@
                                 <td>{{ $section->title }}</td>
                                 <td><button type="button" class="btn btn-info"><i class="fa fa-plus"></i><a
                                             style="color: white; text-transform: capitalize; margin-left: 9px;"
-                                            href="{{ route('posts.create') }}"></a>{{ trans('section_trans.btn_add') }}</button></td>
+                                            href="{{ route('posts.index') }}"></a>{{ trans('section_trans.btn_add') }}</button>
+                                </td>
                                 <td>
                                     <div>
 
@@ -41,7 +42,8 @@
                                             @method('DELETE')
                                             @csrf
 
-                                            <span><input class="ti-trash" value="{{trans('section_trans.delete') }}" type="submit"></span>
+                                            <span><input class="ti-trash" value="{{ trans('section_trans.delete') }}"
+                                                    type="submit"></span>
                                         </form>
                                     </div>
 

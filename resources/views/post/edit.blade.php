@@ -5,22 +5,21 @@
 
     <div class="card">
         <div class="card-header">
-            <strong>edit post</strong>
+            <strong>{{ trans('post_trans.edit_post_h') }}</strong>
         </div>
         <div class="card-body card-block">
             <form action="{{ route('posts.update', $post->id) }}" method="post" class="form-horizontal">
                 @csrf
                 @method('PUT')
                 <div class="row form-group">
-                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">edit post Name</label></div>
+                    <div class="col col-md-3"><label for="text-input" class=" form-control-label">{{ trans('post_trans.edit_post_name') }}</label></div>
                     <div class="col-12 col-md-9"><input type="text" id="text-input"
                             name="name"value="{{ $post->name }}" placeholder="Section Name" class="form-control"><small
                             class="form-text text-muted">Enter the
                             Post Name</small></div>
                 </div>
                 <div class="row form-group">
-                    <div class="col col-md-3"><label for="title-input" class=" form-control-label">Title of the
-                            post</label></div>
+                    <div class="col col-md-3"><label for="title-input" class=" form-control-label">{{ trans('post_trans.edit_post_title') }}</label></div>
                     <div class="col-12 col-md-9"><input type="text" id="title-input" name="title"
                             value="{{ $post->title }}" placeholder="Enter The Title of the post"
                             class="form-control"><small class="help-block form-text">edit The Title of the post</small>
@@ -29,7 +28,7 @@
 
 
                 <div class="row form-group">
-                    <div class="col col-md-3"><label for="description" class=" form-control-label">Textarea</label></div>
+                    <div class="col col-md-3"><label for="description" class=" form-control-label">{{ trans('post_trans.Textarea') }}</label></div>
                     <div class="col-12 col-md-9">
 
                         <textarea name="description" value="{{ $post->description }}" id="description" rows="9" placeholder="Content..."
@@ -39,7 +38,7 @@
 
 
                 <div class="row form-group">
-                    <div class="col col-md-3"><label for="select" class=" form-control-label">Select</label></div>
+                    <div class="col col-md-3"><label for="select" class=" form-control-label">{{ trans('post_trans.section') }}</label></div>
                     <div class="col-12 col-md-9">
                         <select name="section_id" id="select" class="form-control">
                             @foreach ($sections as $section)
