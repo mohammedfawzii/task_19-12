@@ -30,9 +30,9 @@ class SectionController extends Controller
      */
     public function store(Request $request)
     {
-
-            Section::create(
-            $request->all()
+        // dd($request->all());
+        Section::create(
+            $request->except(['_token', '_method'])
         );
         return redirect()->route('sections.index')->with('message', 'section created');
     }
@@ -60,7 +60,7 @@ class SectionController extends Controller
     public function update(Request $request, $id)
     {
         $post = Section::findorFail($id);
-        $post->update($request->all());
+        $post->update($request->except(['_token', '_method']));
         return redirect()->route('sections.index')->with('message', 'section update');
     }
 

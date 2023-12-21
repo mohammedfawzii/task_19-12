@@ -83,12 +83,11 @@ return [
     |
     */
 
-    'locale' =>
-         'en',
-        //  'language'=>[
-        //     'ar'=>'لعربيه',
-        //     'en'=>'English',
-        //  ];
+    'locale' =>'en',
+         'languages'=>[
+            'ar'=>'العربيه',
+            'en'=>'English',
+         ],
 
 
     /*
